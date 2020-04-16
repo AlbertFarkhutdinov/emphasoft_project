@@ -1,0 +1,27 @@
+{% extends 'auth_app/base.html'%}
+
+{% block container %}
+{% if user.is_authenticated %}
+<h4 class="h4 text-center">Вход уже выполнен</h4>
+<form class="form-horizontal" action="{% url 'auth:info' %}">
+    <button class="btn btn-round form-control" type="submit">На страницу с информацией</button>
+</form>
+{% include 'auth_app/includes/logout_button.html' %}
+{% else %}
+<form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
+    {% csrf_token %}
+    {% if next %}
+    <input type="hidden" name="next" value="{{next}}"><br>
+    {% endif %}
+    <button class="btn btn-round form-control">
+        <a href="{% url 'social:begin' 'vk-oauth2' %}?next={% url 'auth:info' %}">
+            Авторизоваться через ВКонтакте
+        </a>
+    </button>
+</form>
+<form class="form-horizontal" action="/admin/">
+    <button class="btn btn-round form-control" type="submit">Вход для администратора</button>
+</form>
+{% endif %}
+
+{% endblock %}

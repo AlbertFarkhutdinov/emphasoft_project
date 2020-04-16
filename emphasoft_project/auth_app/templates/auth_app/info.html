@@ -1,0 +1,16 @@
+{% extends 'auth_app/base.html'%}
+
+{% block container %}
+<h1 class="h1 text-center">{{ username }}</h1>
+<h2 class="h2 text-center">Список друзей</h2>
+{% if friends %}
+    <ul class="list-group">
+        {% for friend in friends %}
+            <li class="list-group-item">{{ friend }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h4 class="h4 text-center">Нет друзей</h4>
+{% endif %}
+{% include 'auth_app/includes/logout_button.html' %}
+{% endblock %}
