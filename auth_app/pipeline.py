@@ -12,8 +12,7 @@ def save_user_profile(backend, user, response, *args, **kwargs):
                                 '/method/friends.get',
                                 None,
                                 urlencode(
-                                    OrderedDict(count=5,
-                                                order='random',
+                                    OrderedDict(order='random',
                                                 name_case='nom',
                                                 fields='domain',
                                                 access_token=response['access_token'],
@@ -28,7 +27,7 @@ def save_user_profile(backend, user, response, *args, **kwargs):
         for friend in resp_1.json()['response']['items']:
             if len(friends) == 5:
                 break
-            if friend["deactivated"] is None:
+            if friend.get("deactivated", None) is None and friend["first_name"] != 'DELETED':
                 friends.append(f'{friend["first_name"]} {friend["last_name"]}')
         if friends:
             user.customuserprofile.friends = ','.join(friends)
