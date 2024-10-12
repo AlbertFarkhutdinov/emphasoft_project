@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "emphasoft"
+version = "0.1.0"
+description = ""
+authors = ["AlbertFarkhutdinov <albertfarhutdinov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+dj-database-url = "<2.3"
+django = "<5.2"
+django-debug-toolbar = "<4.5"
+django-debug-toolbar-template-profiler = "<2.2"
+django-extensions = "<3.3"
+gunicorn = "<23.1"
+pillow = "<10.5"
+psycopg2-binary = "<2.10"
+requests = "<2.33"
+social_auth_app_django = "<5.5"
+whitenoise = "<6.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
