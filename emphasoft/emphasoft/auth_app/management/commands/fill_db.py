@@ -9,5 +9,5 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         """Logic of command 'python manage.py fill_db'"""
         CustomUser.objects.all().delete()
-        if settings.SUPERUSER:
+        if getattr(settings, 'SUPERUSER', {}):
             CustomUser.objects.create_superuser(**settings.SUPERUSER)

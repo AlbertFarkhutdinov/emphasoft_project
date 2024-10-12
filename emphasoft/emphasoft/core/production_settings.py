@@ -18,14 +18,14 @@ ALLOWED_HOSTS = [
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR.joinpath('static')
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
 # Heroku: Update database configuration from $DATABASE_URL.
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware')
 
