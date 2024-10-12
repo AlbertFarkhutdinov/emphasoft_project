@@ -2,9 +2,9 @@
 
 {% block container %}
 {% if user.is_authenticated %}
-<h4 class="h4 text-center">Вход уже выполнен</h4>
+<h4 class="h4 text-center">User already logged in</h4>
 <form class="form-horizontal" action="{% url 'auth:info' %}">
-    <button class="btn btn-round form-control" type="submit">На страницу с информацией</button>
+    <button class="btn btn-round form-control" type="submit">Info</button>
 </form>
 {% include 'auth_app/includes/logout_button.html' %}
 {% else %}
@@ -15,12 +15,12 @@
     {% endif %}
     <button class="btn btn-round form-control">
         <a href="{% url 'social:begin' 'vk-oauth2' %}?next={% url 'auth:info' %}">
-            Авторизоваться
+            Login
         </a>
     </button>
 </form>
 <form class="form-horizontal" action="/admin/">
-    <button class="btn btn-round form-control" type="submit">Вход для администратора</button>
+    <button class="btn btn-round form-control" type="submit">Admin Page</button>
 </form>
 {% endif %}
 
