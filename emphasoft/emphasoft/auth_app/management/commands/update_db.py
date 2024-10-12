@@ -1,7 +1,7 @@
 """Module for updating user instances that already exist,
 when CustomUserProfile model is changed"""
 from django.core.management.base import BaseCommand
-from auth_app.models import CustomUser, CustomUserProfile
+from emphasoft.auth_app.models import CustomUser, CustomUserProfile
 
 
 class Command(BaseCommand):

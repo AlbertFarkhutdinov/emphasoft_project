@@ -1,7 +1,7 @@
 """Module for filling database with initial data"""
 from django.core.management.base import BaseCommand
 from django.conf import settings
-from auth_app.models import CustomUser
+from emphasoft.auth_app.models import CustomUser
 
 
 class Command(BaseCommand):
