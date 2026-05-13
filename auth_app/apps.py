@@ -5,4 +5,4 @@ from django.apps import AppConfig
 class AuthAppConfig(AppConfig):
     """Class for auth_app configuration."""
 
-    name = 'emphasoft.auth_app'
+    name = 'auth_app'

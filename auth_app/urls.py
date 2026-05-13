@@ -1,7 +1,7 @@
 """auth_app URL Configuration."""
 from django.urls import path
 
-from emphasoft.auth_app import views as auth_app_views
+from auth_app import views as auth_app_views
 
 app_name = 'auth_app'
 urlpatterns = [

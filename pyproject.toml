@@ -1,0 +1,31 @@
+[project]
+name = "emphasoft"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+authors = [
+    {name = "AlbertFarkhutdinov",email = "albertfarhutdinov@gmail.com"}
+]
+dependencies = [
+    "dj-database-url (<3.2)",
+    "django (<6.0)",
+    "django-bootstrap-v5",
+    "django-debug-toolbar (<6.4)",
+    "django-debug-toolbar-template-profiler (<2.2)",
+    "django-extensions (<4.2)",
+    "gunicorn (<27.0)",
+    "pillow (<12.3)",
+    "psycopg2-binary (<2.10)",
+    "requests (<2.35)",
+    "social_auth_app_django (<6.0)",
+    "whitenoise (<6.13)"
+]
+
+[dependency-groups]
+dev = [
+    "pytest (<10.0)",
+    "pytest-cov (<8.0)",
+    "ruff (<1.0)",
+    "wemake-python-styleguide (<2.0)",
+]

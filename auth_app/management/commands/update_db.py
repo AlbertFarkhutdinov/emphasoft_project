@@ -1,7 +1,7 @@
 """Update existing user instances, when CustomUserProfile model is changed."""
 from django.core.management.base import BaseCommand
 
-from emphasoft.auth_app.models import CustomUser, CustomUserProfile
+from auth_app.models import CustomUser, CustomUserProfile
 
 
 class Command(BaseCommand):

@@ -165,7 +165,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'some_secret_key')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'emphasoft-project.herokuapp.com',
+    'src-project.herokuapp.com',
     '127.0.0.1',
 ]
 

@@ -1,7 +1,6 @@
-cd emphasoft\emphasoft
-poetry run python clean_db.py
-poetry run python manage.py makemigrations auth_app
-poetry run python manage.py migrate
-poetry run python manage.py fill_db
-poetry run python manage.py runserver
+uv run clean_db.py
+uv run manage.py makemigrations auth_app
+uv run manage.py migrate
+uv run manage.py fill_db
+uv run manage.py runserver
 pause

@@ -2,7 +2,7 @@
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from emphasoft.auth_app.models import CustomUser
+from auth_app.models import CustomUser
 
 
 class Command(BaseCommand):
