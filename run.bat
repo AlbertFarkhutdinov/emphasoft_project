@@ -1,1 +1,2 @@
-python manage.py runserver
+cd emphasoft\emphasoft
+poetry run python manage.py runserver

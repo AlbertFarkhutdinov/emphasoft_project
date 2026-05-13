@@ -2,7 +2,7 @@
 
 {% block container %}
 <h1 class="h1 text-center">{{ username }}</h1>
-<h2 class="h2 text-center">Список друзей</h2>
+<h2 class="h2 text-center">Friends List</h2>
 {% if friends %}
     <ul class="list-group">
         {% for friend in friends %}
@@ -10,7 +10,7 @@
         {% endfor %}
     </ul>
 {% else %}
-    <h4 class="h4 text-center">Нет друзей</h4>
+    <h4 class="h4 text-center">No friends</h4>
 {% endif %}
 {% include 'auth_app/includes/logout_button.html' %}
 {% endblock %}

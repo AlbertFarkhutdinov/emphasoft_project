@@ -1,6 +1,6 @@
-python clean_db.py
-python manage.py makemigrations auth_app
-python manage.py migrate
-python manage.py fill_db
-python manage.py runserver
+uv run clean_db.py
+uv run manage.py makemigrations auth_app
+uv run manage.py migrate
+uv run manage.py fill_db
+uv run manage.py runserver
 pause
